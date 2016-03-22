@@ -2,6 +2,24 @@
 You can run rails apps in different modes (development, production). For more information
 about rails and what it can do, see the [rails guides.](http://guides.rubyonrails.org/getting_started.html)
 
+## Configuring OSEM
+There are a couple of environment variables you can set to configure OSEM.
+
+| Variable 			| Content 			| Purpose 				|
+|----------			|---------			|---------	       			|
+| OSEM_NAME   			| openSUSE Events		| The name of your page			|
+| OSEM_HOSTNAME 		| events.opensuse.org		| The host this OSEM instance runs on 	|
+| OSEM_EMAIL_ADDRESS 		| events@opensuse.org 		| The address OSEM uses for sending mails |
+| OSEM_ICHAIN_ENABLED 		| true/false 			| Enable the usage of [devise_ichain_authenticatable](https://github.com/openSUSE/devise_ichain_authenticatable) |
+| OSEM_TRANSIFEX_APIKEY 	| *string* 			| Use this api key for [transifex](https://www.transifex.com/). See TRANSLATION.md for details. |
+| OSEM_ERRBIT_HOST 		| errbit.opensuse.org 		| The [errbit](https://github.com/errbit/errbit) host to post exceptions to |
+| OSEM_ERRBIT_APIKEY 		| *string* 			| The api key for the errbit host |
+| OSEM_LETTER_OPENER 		| *boolean* (true/false) 	| Don't send mails, use /letter_opener in production |
+| OSEM_FACTORY_LINT		| *boolean* (true/false)        | Setting this to false will disable linting of factories before running spec
+| OSEM_GOOGLE_KEY/OSEM_GOOGLE_SECRET | *string*			| OMNIAUTH Developer Keys/Secrets for GOOGLE
+| OSEM_FACEBOOK_KEY/OSEM_FACEBOOK_SECRET | *string*		| OMNIAUTH Developer Keys/Secrets for Facebook
+| OSEM_GITHUB_KEY/OSEM_GITHUB_SECRET |*string*			| OMNIAUTH Developer Keys/Secrets for GitHub
+
 ### Run OSEM in development
 We are using [Vagrant](https://www.vagrantup.com/) to create our development environments.
 
